@@ -7,7 +7,10 @@ let Usersslice = createSlice({
             id: 1,
             name: 'Alex adams'
         }
-        ]
+        ],
+        theme: {
+            color: true
+        }
     },
     reducers: {
         addUser(state, action) {
@@ -17,7 +20,8 @@ let Usersslice = createSlice({
             state.users = state.users.filter(item => item.id !== action.payload.id)
         },
         editeUser(state, action) {
-            
+            console.log(state);
+            console.log(action.payload);
         }
     }
 })
